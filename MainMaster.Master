@@ -1,0 +1,368 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="RailwayTicketingProject.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Keywords" content="">
+    <title>Railway Ticketing System</title>
+    <!-- Page Important CSS -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <!--Fixed Right Social Icon-->
+            <div class="fixed-social-wrp">
+                <asp:HyperLink ID="linksubfornewsletter" CssClass="newsletter-fixed" runat="server"  NavigateUrl="#subscribe" >Subscribe</asp:HyperLink>
+                <!--<a href="" class="newsletter-fixed">Subscribe
+                    <br>
+                    for Newsletter
+                </a>-->
+                <ul class="fixed-social-link">
+                    <li>
+                        <asp:HyperLink ID="linkfb" NavigateUrl="https://www.facebook.com/pranav.surekar.5/" runat="server"><img src="images/icon/fb-color.png" class="img-responsive"></asp:HyperLink>
+
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="linktwitter" NavigateUrl="https://twitter.com/PranavSurekar" runat="server"><img src="images/icon/twitter-color.png" class="img-responsive"></asp:HyperLink>
+
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="link_linkedin" NavigateUrl="https://www.linkedin.com/in/pranav-surekar-89a8b2171/" runat="server"><img src="images/icon/linkedin-color.png" class="img-responsive"></asp:HyperLink>
+
+                    </li>
+                </ul>
+            </div>
+            <!-- fixed-social-wrp -->
+
+            <!-- Page Header -->
+            <header class="headermain-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex space-between">
+
+                                <div class="logo-box">
+                                    <a href="Home">
+                                        <img src="images/logo.PNG" class="img-responsive"></a>
+                                </div>
+                                <!-- logo-box -->
+
+                                <div class="menu-box text-right">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserLogin.aspx" CssClass="login-link">
+                                        <span>
+                                            <img src="images/icon/icon-1.png"></span>
+                                        Login
+                                    </asp:HyperLink>
+                                    <div runat="server" id="logout" class="userprofile-loginsect">
+                                       <a href="javascript:void(0)" class="login-link">
+                                            <span>
+                                                <img src="images/icon/icon-1.png"></span>
+                                            <span id="username" runat="server"></span><span><i class="fa fa-angle-down"></i></span>
+                                        </a>
+                                        <div class="userprofile-moreoption">
+                                            <ul class="userprofile-optionlist">
+                                                <li>
+                                                    <a href="user-profile.aspx?query=Profile">Profile</a>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton CausesValidation="false" ID="HyperLink2" runat="server" OnClick="HyperLink2_Click">Logout</asp:LinkButton>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <!--End of the user profile more option-->
+                                    </div>
+                                    <!--End of the user profile login section-->
+
+                                    <div class="nav-bar-menu-box d-flex al">
+                                        <ul class="nav-bar-menu">
+                                            <li><a href="book-ticket.aspx">BOOK TICKET </a></li>
+                                            <li><a href="train-timetable.aspx">TRAIN TIME TABLE </a></li>
+                                            <li><a href="cancellations.aspx">CANCELLATIONS </a></li>
+                                            <li><a href="add-balance.aspx">ADD BALANCE </a></li>
+                                            <li><a href="feedback.aspx">FEEDBACK</a></li>
+                                            <li><a href="contact-us.aspx">CONTACT US</a></li>
+                                        </ul>
+                                        <!-- nav-bar-menu -->
+                                       <%-- <ul class="nav-bar-menu-icon">
+                                            <li class="burger-icon"><a href="javascript:void(0)">
+                                                <img src="images/icon/hamburger.png"></a>
+                                            </li>
+                                            <li class="search-icon"><a href="javascript:void(0)">
+                                                <img src="images/icon/search.png"></a></li>
+                                        </ul>--%>
+
+                                         <ul class="nav-bar-menu-icon">
+                                            <li class="burger-icon"><a href="javascript:void(0)">
+                                                <img src="images/icon/hamburger.png"></a>
+
+                                            </li>
+                                           
+                                        </ul>
+                                        <!-- nav-bar-menu-icon -->
+                                    </div>
+                                </div>
+                                <!-- menu-box -->
+
+                            </div>
+                            <!-- d-flex -->
+                        </div>
+                    </div>
+                </div>
+                <!-- container -->
+                <div class="megamenu-wrapper">
+                    <div class="container">
+                        <div class="megamenu-innerwrapper">
+                            <div class="megamenu-panel">
+                                <div class="individualmega-menu desktopmenu hidden-md hidden-lg">
+                                    <ul class="megamenu-list">
+                                        <li><a href="train-timetable.aspx">
+                                            <h5 class="mega-head">TRAIN TIME TABLE </h5>
+                                        </a></li>
+                                        <li><a href="book-ticket.aspx">
+                                            <h5 class="mega-head">BOOK TICKET </h5>
+                                        </a></li>
+                                        <li><a href="cancellations.aspx">
+                                            <h5 class="mega-head">CANCELLATIONS  </h5>
+                                        </a></li>
+                                        <li><a href="add-balance.aspx">
+                                            <h5 class="mega-head">ADD BALANCE  </h5>
+                                        </a></li>
+                                        <li><a href="feedback.aspx">
+                                            <h5 class="mega-head">FEEDBACK </h5>
+                                        </a></li>
+                                        <li><a href="contact-us.aspx">
+                                            <h5 class="mega-head">CONTACT US</h5>
+                                        </a></li>
+                                        <li><a href="user-profile.aspx?query=changepass">
+                                            <h5 class="mega-head">CHANGE PASSWORD</h5>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="individualmega-menu">
+                                    <ul class="megamenu-list" id="clickable-menu">
+                                        <li class="implink-menu">
+                                            <a href="javascript:void(0)">
+                                                <h5 class="mega-head">Other links</h5>
+                                            </a>
+                                        </li>
+                                        <li class="mt-1"><a href="user-profile.aspx?query=changepass" class="hidden-menu">
+                                            <p>Change Password</p>
+                                        </a></li>
+                                     
+
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                            <!--End of the mega menu-->
+                            <div class="close-icon hidden-md hidden-lg">
+                                <a href="javascript:void(0)" class="close-menu">
+                                    <img src="images/closeicon.png" alt="" />
+                                </a>
+                            </div>
+                            <!--End of the close icn-->
+                        </div>
+                        <!--End of the mega menu wrapper-->
+                    </div>
+                </div>
+                <!--End of the mega menu wrapper-->
+
+
+                <%--<div class="megamenu-wrapper-one">
+                    <div class="container">
+                        <div class="megasearch-innerwrap">
+                            <div class="megasearch-panel">
+                                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                <asp:TextBox ID="txtsearchmaster" runat="server" CssClass="form-control search-input" placeholder="What are you looking for?"></asp:TextBox>
+                                <cc1:AutoCompleteExtender ServiceMethod="GetCompletionListMaster"
+                                    MinimumPrefixLength="3"
+                                    CompletionInterval="100" EnableCaching="false" CompletionSetCount="10"
+                                    TargetControlID="txtsearchmaster"
+                                    ID="txtsearch_AutoCompleteExtender" runat="server" FirstRowSelected="false">
+                                </cc1:AutoCompleteExtender>
+                                
+                                <!--<input type="text" id="search" runat="server" class="form-control search-input" placeholder="What are you looking for?" />-->
+
+                                <!-- <cc1:AutoCompleteExtender runat="server" ServiceMethod="GetCompletionListMaster" DelimiterCharacters=""
+                    BehaviorID="txtsearchmaster_AutoCompleteExtender" CompletionSetCount="10" CompletionInterval="100" MinimumPrefixLength="3"
+                    TargetControlID="txtsearchmaster" ID="txtsearchmaster_AutoCompleteExtender"></cc1:AutoCompleteExtender>-->
+                                <div class="search-icon-mega">
+                                    <!--<a href="javascript:void(0)">  <i class="fa fa-search"></i></a>-->
+                                    <asp:LinkButton ID="SearchLink" runat="server" OnClick="SearchLink_Click"><i class="fa fa-search"></i></asp:LinkButton>
+                                    
+                                </div>
+                                <!--End of the search icon-->
+                            </div>
+                            <!--End of the mega search panel-->
+                        </div>
+                        <!--End of the mega search inner wrap-->
+                    </div>
+                    <!--End of the container-->
+                </div>--%>
+                <!--End of the mega menu wrapper one-->
+            </header>
+
+            <!--Header News Slider-->
+           <%-- <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="header-news-slider d-flex left-black-patch">
+                            <div class="white-box"></div>
+                            <div class="slider-text-box">
+                                <div id="myCarousel" class="carousel slide vertical">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item">
+                                            <asp:Literal ID="top3BannerHeadlineList" runat="server"></asp:Literal>
+                                           
+                                        </div>
+                                        <div class="item">
+                                             <asp:Literal ID="top3BannerHeadlineList1" runat="server"></asp:Literal>
+                                        </div>
+                                        <div class="active item">
+                                            <p>India Ratings Affirms Setubandhan Infrastructure at ‘IND D(ISSUER NOT COOPERATING)</p>
+                                        </div>
+                                        <div class="item">
+                                            <p>India Ratings Affirms Setubandhan Infrastructure at ‘IND D(ISSUER NOT COOPERATING)</p>
+                                        </div>
+                                        <div class="item">
+                                            <p>India Ratings Affirms Setubandhan Infrastructure at ‘IND D(ISSUER NOT COOPERATING)</p>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-menu-up"></span>
+                                    </a>
+                                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-menu-down"></span>
+                                    </a>
+                                </div>
+                                <!--myCarousel-->
+                            </div>
+                            <!--slider-text-box-->
+                        </div>
+                        <!--header-news-slider-->
+                    </div>
+                </div>
+            </div>--%>
+            <!--container-->       
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+             <!--Footer-->
+            <footer class="bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footer-heading text-center">
+                                <h1>Let's Talk?</h1>
+                            </div>
+                            <div class="contact-source-wrp d-flex space-between">
+                                <div class="contact-source-card d-flex">
+                                    <div class="icon">
+                                        <img src="images/icon/icon-6.png">
+                                    </div>
+                                    <div class="details">
+                                        <p>Call Us</p>
+                                        <asp:HyperLink ID="HyperLink4" runat="server">+917767894951</asp:HyperLink>
+                                    </div>
+                                    <!--details-->
+                                </div>
+                                <!--contact-source-card-->
+                                <div class="contact-source-card d-flex">
+                                    <div class="icon">
+                                        <img src="images/icon/icon-7.png">
+                                    </div>
+                                    <div class="details">
+                                        <p>Write To Us</p>
+                                        <asp:HyperLink ID="linkindiaratings" NavigateUrl="mailto:pranavsurekar00@gmail.com" runat="server">pranavsurekar00@gmail.com</asp:HyperLink>
+                                    </div>
+                                    <!--details-->
+                                </div>
+                                <!--contact-source-card-->
+                                <div class="contact-source-card d-flex">
+                                    <div class="details">
+                                        <asp:HyperLink runat="server" ID="linksubscribeforlatestrating" class="subscribe-btn">
+                                            <i>Subscribe for our
+                                                <br>
+                                                latest rating rationales</i>
+                                            <img src="images/icon/icon-8.png">
+                                        </asp:HyperLink>
+                                    </div>
+                                    <!--details-->
+                                </div>
+                                <!--contact-source-card-->
+                            </div>
+                            <!--contact-source-wrp-->
+                            
+                            <div class="footer-bottom">
+                                <div class="d-flex space-between">
+                                    <p>Copyright © 2021 All Rights Reserved.</p>
+                                    <div class="social-and-link d-flex align-items-start">
+                                        <div class="footer-extra-link">
+                                            <ul>
+                                                <li><asp:HyperLink ID="HyperLink10" NavigateUrl="~/index.aspx" runat="server">Home</asp:HyperLink></li>
+                                                <li>|</li>
+                                                <li><asp:HyperLink ID="HyperLink11" runat="server">About Us</asp:HyperLink></li>
+                                                <li>|</li>
+                                                <li><asp:HyperLink ID="HyperLink12" runat="server">Contact Us</asp:HyperLink></li>
+                                            </ul>
+                                        </div>
+                                        <!--footer-extra-link-->
+                                        <div class="social-icon">
+                                           <asp:HyperLink ID="HyperLink13" NavigateUrl="https://www.facebook.com/pranav.surekar.5/" runat="server">
+                                                <img src="images/icon/fb.png">
+                                            </asp:HyperLink>
+                                           <asp:HyperLink ID="HyperLink14" NavigateUrl="https://twitter.com/PranavSurekar" runat="server">
+                                                <img src="images/icon/twitter.png">
+                                            </asp:HyperLink>
+                                            <asp:HyperLink ID="HyperLink15" NavigateUrl="https://www.linkedin.com/in/pranav-surekar-89a8b2171/" runat="server">
+                                                <img src="images/icon/linkedin.png">
+                                            </asp:HyperLink>
+                                        </div>
+                                        <!--social-icon-->
+                                    </div>
+                                    <!--social-and-link-->
+                                </div>
+                            </div>
+                            <!--footer-bottom-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--Footer-->
+
+
+        </div>
+        <!-- Page Important JS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/global.js"></script>
+        <script>
+$('.userprofile-loginsect .login-link').click(function(){
+   $('.userprofile-moreoption').slideToggle(); 
+});    
+</script> 
+    </form>
+</body>
+</html>

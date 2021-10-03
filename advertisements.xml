@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/images/Ads/ad1.jpg</ImageUrl>
+    <AlternateText>1</AlternateText>
+    <NavigateUrl>https://www.colourbox.com/vector/travellling-planning-template-horizontal-banner-background-travel-icons-airplane-passport-and-tickets-vector-30902794</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/Ads/ad2.jpg</ImageUrl>
+    <AlternateText>2</AlternateText>
+    <NavigateUrl>http://www.goingplaces.org.au/red-ticket/</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/Ads/ad3.jpg</ImageUrl>
+    <AlternateText>3</AlternateText>
+    <NavigateUrl>https://www.coteca-hamburg.com/en/exhibitors/service/downloads/</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/Ads/ad4.jpg</ImageUrl>
+    <AlternateText>4</AlternateText>
+    <NavigateUrl>https://www.londontoolkit.com/briefing/coaches_megabus.html</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/images/Ads/ad5.jpg</ImageUrl>
+    <AlternateText>5</AlternateText>
+    <NavigateUrl></NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+
+</Advertisements>
